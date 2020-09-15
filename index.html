@@ -1,0 +1,1403 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene loading-screen="dotsColor: black; backgroundColor: white"
+        fog="type: exponential; color: #EEEEEE; density: 0.03" renderer="antialias: true">
+        <a-assets>
+            <img id="sky" src="images/sky.jpg">
+
+            <img id="yellow-brick" src="images/yellow-bricks.png">
+            <img id="white-brick" src="images/white-bricks.jpg">
+            <img id="door1" src="images/door1.jpg">
+            <img id="floor" src="images/floor.jpg">
+            <img id="paper" src="images/paper.jpg">
+            <img id="metal" src="images/metal.jpg">
+
+            <img id="frontpanel1" src="images/frontpanel1.png">
+            <img id="frontpanel2" src="images/frontpanel2.png">
+            <img id="frontpanel3" src="images/frontpanel3.png">
+            <img id="frontpanel4" src="images/frontpanel4.png">
+            <img id="frontpanel5" src="images/frontpanel5.png">
+            <img id="frontpanel6" src="images/frontpanel6.png">
+
+            <!-- Sanjana -->
+            <img id="sanjana-01" src="images/sanjana/Lightning.png">
+            <img id="sanjana-02" src="images/sanjana/Rage.png">
+            <img id="sanjana-03" src="images/sanjana/Techno_Blast.png">
+            <img id="sanjana-04" src="images/sanjana/Voltaic.png">
+            <img id="sanjana-05" src="images/sanjana/White_Fire.png">
+            <img id="sanjana-frontpanel" src="images/sanjana/sanjana-frontpanel.png">
+            <img id="sanjana-backpanel" src="images/sanjana/sanjana-backpanel.png">
+
+            <a-mixin id="sanjana-series-note" text="value:
+                Infinite Power
+                by Sanjana Padmanabhan
+                
+                I'm a final year design student, and among
+                other things, I love to experiment with
+                colorful coding explorations.
+                
+                Art Profile on Instagram:
+                https://www.instagram.com/sanjanaaa.art/
+                ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sanjana-01-note" text="value:
+                Lightning
+
+                by Sanjana
+                Padmanabhan
+                ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sanjana-02-note" text="value:
+                Lightning
+
+                by Sanjana
+                Padmanabhan
+                ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sanjana-03-note" text="value:
+                Lightning
+
+                by Sanjana
+                Padmanabhan
+                ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sanjana-04-note" text="value:
+                Lightning
+
+                by Sanjana
+                Padmanabhan
+                ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sanjana-05-note" text="value:
+                Lightning
+
+                by Sanjana
+                Padmanabhan
+                ; color: #000">
+            </a-mixin>
+
+            <!-- Aditya -->
+            <img id="aditya-01" src="images/aditya/mandelbrot7.png">
+            <img id="aditya-02" src="images/aditya/mandelbrot12.png">
+            <img id="aditya-03" src="images/aditya/mandelbrot16.png">
+            <img id="aditya-04" src="images/aditya/mandelbrot19.png">
+            <img id="aditya-05" src="images/aditya/mandelbrot20.png">
+            <img id="aditya-frontpanel" src="images/aditya/aditya-frontpanel.png">
+            <img id="aditya-backpanel" src="images/aditya/aditya-backpanel.png">
+
+            <a-mixin id="aditya-series-note" text="value:
+            Ordered Chaos
+            by Aditya De
+
+            I am a problem solver at heart. I specialize 
+            in using code as a medium for art, as a tool 
+            for design and everything that is in between.
+
+            https://www.linkedin.com/in/
+            aditya-de-94222a163
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="aditya-01-note" text="value:
+            Mandelbrot 7
+
+            by Aditya De
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="aditya-02-note" text="value:
+            Mandelbrot 12
+
+            by Aditya De
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="aditya-03-note" text="value:
+            Mandelbrot 16
+
+            by Aditya De
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="aditya-04-note" text="value:
+            Mandelbrot 19
+
+            by Aditya De
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="aditya-05-note" text="value:
+            Mandelbrot 20
+
+            by Aditya De
+            ; color: #000">
+            </a-mixin>
+
+
+            <!-- Sahir -->
+            <img id="sahir-01" src="images/sahir/1 - new beginnings.jpg">
+            <img id="sahir-02" src="images/sahir/2 - glimpses.jpg">
+            <img id="sahir-03" src="images/sahir/3 - expanse.jpg">
+            <img id="sahir-04" src="images/sahir/4 - convergence.jpg">
+            <img id="sahir-05" src="images/sahir/5 - scope.jpg">
+            <img id="sahir-frontpanel" src="images/sahir/sahir-frontpanel.png">
+            <img id="sahir-backpanel" src="images/sahir/sahir-backpanel.png">
+
+            <a-mixin id="sahir-series-note" text="value:
+            Endless
+            by Sahir Virmani
+
+            I’m a 3D Artist / Game Developer currently 
+            pursuing a Master’s in Game Design and 
+            Development from Srishti Institute of Art, 
+            Design and Technology. 
+
+            http://sahirvirmani.myportfolio.com
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sahir-01-note" text="value:
+            New Beginnings
+
+            by Sahir Virmani
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sahir-02-note" text="value:
+            Glimpses
+
+            by Sahir Virmani
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sahir-03-note" text="value:
+            Expanse
+
+            by Sahir Virmani
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sahir-04-note" text="value:
+            Convergence
+
+            by Sahir Virmani
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="sahir-05-note" text="value:
+            Scope
+
+            by Sahir Virmani
+            ; color: #000">
+            </a-mixin>
+
+            <!-- Madhav -->
+            <img id="madhav-01" src="images/madhav/1.png">
+            <img id="madhav-02" src="images/madhav/color4.png">
+            <img id="madhav-03" src="images/madhav/julia3.jpg">
+            <img id="madhav-04" src="images/madhav/julia4.jpg">
+            <img id="madhav-05" src="images/madhav/julia5.jpg">
+            <img id="madhav-backpanel" src="images/madhav/madhav-backpanel.png">
+            <img id="madhav-frontpanel" src="images/madhav/madhav-frontpanel.png">
+
+            <a-mixin id="madhav-series-note" text="value:
+            Untitled
+            by Madhav S
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="madhav-01-note" text="value:
+            01
+
+            by Madhav S
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="madhav-02-note" text="value:
+            02
+
+            by Madhav S
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="madhav-03-note" text="value:
+            03
+
+            by Madhav S
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="madhav-04-note" text="value:
+            04
+
+            by Madhav S
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="madhav-05-note" text="value:
+            05
+
+            by Madhav S
+            ; color: #000">
+            </a-mixin>
+
+            <!-- Ananya -->
+            <img id="ananya-01" src="images/ananya/white.png">
+            <img id="ananya-02" src="images/ananya/white.png">
+            <img id="ananya-03" src="images/ananya/white.png">
+            <img id="ananya-04" src="images/ananya/white.png">
+            <img id="ananya-05" src="images/ananya/white.png">
+            <img id="ananya-frontpanel" src="images/ananya/ananya-frontpanel.png">
+            <img id="ananya-backpanel" src="images/ananya/ananya-backpanel.png">
+
+            <a-mixin id="ananya-series-note" text="value:
+            Untitled
+            by Ananya Rane
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="ananya-01-note" text="value:
+            01
+
+            by Ananya Rane
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="ananya-02-note" text="value:
+            02
+
+            by Ananya Rane
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="ananya-03-note" text="value:
+            03
+
+            by Ananya Rane
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="ananya-04-note" text="value:
+            04
+
+            by Ananya Rane
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="ananya-05-note" text="value:
+            05
+
+            by Ananya Rane
+            ; color: #000">
+            </a-mixin>
+
+            <!-- Subhangini -->
+            <img id="subhangini-01" src="images/subhangini/Mandelbrot 1.png">
+            <img id="subhangini-02" src="images/subhangini/Mandelbrot 2.png">
+            <img id="subhangini-03" src="images/subhangini/Mandelbrot 3.png">
+            <img id="subhangini-04" src="images/subhangini/Mandelbrot 4.png">
+            <img id="subhangini-05" src="images/subhangini/Mandelbrot 5.png">
+            <img id="subhangini-frontpanel" src="images/subhangini/subhangini-frontpanel.png">
+            <img id="subhangini-backpanel" src="images/subhangini/subhangini-backpanel.png">
+
+            <a-mixin id="subhangini-series-note" text="value:Painting Un-ending-ness
+            by Shubhangini Dhall
+
+            A student under Industrial Arts and Design Practices, I aspire to create human centric products and have a knack for creating patterns as well.
+            
+            Find my illustrated stories on StoryWeaver: 
+            https://storyweaver.org.in/users/145099-shubhangini-dhall
+            
+            Instagram: @chanchal_nirmala; color: #000">
+            </a-mixin>
+
+            <a-mixin id="subhangini-01-note" text="value:
+            Glow
+
+            by Shubhangini 
+            Dhall
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="subhangini-02-note" text="value:
+            Algae
+
+            by Shubhangini 
+            Dhall
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="subhangini-03-note" text="value:
+            if Mandelbrot was 
+            Instagram
+
+            by Shubhangini 
+            Dhall
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="subhangini-04-note" text="value:
+            Conceal
+
+            by Shubhangini 
+            Dhall
+            ; color: #000">
+            </a-mixin>
+
+            <a-mixin id="subhangini-05-note" text="value:
+            Sea
+
+            by Shubhangini 
+            Dhall
+            ; color: #000">
+            </a-mixin>
+
+        </a-assets>
+
+        <a-sky id="image-360" radius="20" src="#sky"></a-sky>
+
+        <!-- Camera and cursor -->
+        <a-entity camera look-controls wasd-controls position="0 1.6 0">
+            <a-cursor id="cursor"
+                animation__click="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 150; startEvents: click"
+                animation__clickreset="property: scale; to: 0.1 0.1 0.1; dur: 1; startEvents: animationcomplete__click"
+                animation__fusing="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 150; startEvents: fusing">
+        </a-entity>
+
+        <!-- Yellow frame at the roof -->
+        <a-entity position="0 5 0" castShadow="true">
+            <a-box color="orange" position="0 3.9 -5.2" scale="28 0.2 0.1"></a-box>
+            <a-box color="orange" position="0 3.9 -1.5" scale="28 0.2 0.1"></a-box>
+            <a-box color="orange" position="0 3.9 1.5" scale="28 0.2 0.1"></a-box>
+            <a-box color="orange" position="0 3.9 5.2" scale="28 0.2 0.1"></a-box>
+            <a-box color="orange" position="-12.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box color="orange" position="-8.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box color="orange" position="-4.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box color="orange" position="0 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box color="orange" position="4.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box color="orange" position="8.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box color="orange" position="12.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+        </a-entity>
+
+        <!-- Frame for focus lights -->
+        <a-entity castShadow="true">
+            <a-box src="#metal" position="0 3.9 -5.2" scale="28 0.2 0.1"></a-box>
+            <a-box src="#metal" position="0 3.9 -1.5" scale="28 0.2 0.1"></a-box>
+            <a-box src="#metal" position="0 3.9 1.5" scale="28 0.2 0.1"></a-box>
+            <a-box src="#metal" position="0 3.9 5.2" scale="28 0.2 0.1"></a-box>
+            <a-box src="#metal" position="-12.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box src="#metal" position="-8.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box src="#metal" position="-4.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box src="#metal" position="0 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box src="#metal" position="4.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box src="#metal" position="8.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+            <a-box src="#metal" position="12.2 3.9 0" scale="14 0.2 0.1" rotation="0 90 0"></a-box>
+        </a-entity>
+
+        <!-- Sanjana -->
+        <a-entity position="-7 2 -6.4" rotation="0 0 0">
+            <a-entity position="-5 -2 1" rotation="0 45 0">
+                <a-box src="#sanjana-frontpanel" position="0 1.4 0" scale="1 2.8 0.01">
+                </a-box>
+                <a-box src="#sanjana-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                </a-box>
+                <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF" emissiveintensity="1">
+                </a-box>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light>
+            </a-entity>
+            <a-entity position="0 -2 1" castShadow="true" rotation="0 -90 0">
+                <a-box position="0 0.01 0" scale="0.4 0.02 0.4"></a-box>
+                <a-box position="0 0.6 0" scale="0.05 1.2 0.05"></a-box>
+                <a-box src="#paper" scale="0.4 0.4 0.05" position="0 1.2 0" rotation="-20 90 0">
+                    <a-entity mixin="sanjana-series-note" position="0.08 0 0.7" scale="1 1 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-4 0 0">
+                <a-box src="#sanjana-01" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sanjana-01-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-2 0 0">
+                <a-box src="#sanjana-02" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sanjana-02-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="0 0 0">
+                <a-box src="#sanjana-03" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sanjana-03-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="2 0 0">
+                <a-box src="#sanjana-04" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sanjana-04-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="4 0 0">
+                <a-box src="#sanjana-05" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sanjana-05-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+        </a-entity>
+
+        <!-- Madhav -->
+        <a-entity position="7 2 -6.4" rotation="0 0 0">
+            <a-entity position="-5 -2 1" rotation="0 45 0">
+                <a-box src="#madhav-frontpanel" position="0 1.4 0" scale="1 2.8 0.01">
+                </a-box>
+                <a-box src="#madhav-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                </a-box>
+                <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF" emissiveintensity="1">
+                </a-box>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light>
+            </a-entity>
+            <a-entity position="0 -2 1" castShadow="true" rotation="0 -90 0">
+                <a-box position="0 0.01 0" scale="0.4 0.02 0.4"></a-box>
+                <a-box position="0 0.6 0" scale="0.05 1.2 0.05"></a-box>
+                <a-box src="#paper" scale="0.4 0.4 0.05" position="0 1.2 0" rotation="-20 90 0">
+                    <a-entity mixin="madhav-series-note" position="0.08 0 0.7" scale="1 1 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-4 0 0">
+                <a-box src="#madhav-01" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="madhav-01-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-2 0 0">
+                <a-box src="#madhav-02" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="madhav-02-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="0 0 0">
+                <a-box src="#madhav-03" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="madhav-03-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="2 0 0">
+                <a-box src="#madhav-04" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="madhav-04-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="4 0 0">
+                <a-box src="#madhav-05" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="madhav-05-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+        </a-entity>
+
+        <!-- Ananya -->
+        <a-entity position="-7 2 6.4" rotation="0 180 0">
+            <a-entity position="-5 -2 1" rotation="0 45 0">
+                <a-box src="#ananya-frontpanel" position="0 1.4 0" scale="1 2.8 0.01">
+                </a-box>
+                <a-box src="#ananya-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                </a-box>
+                <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF" emissiveintensity="1">
+                </a-box>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light>
+            </a-entity>
+            <a-entity position="0 -2 1" castShadow="true" rotation="0 -90 0">
+                <a-box position="0 0.01 0" scale="0.4 0.02 0.4"></a-box>
+                <a-box position="0 0.6 0" scale="0.05 1.2 0.05"></a-box>
+                <a-box src="#paper" scale="0.4 0.4 0.05" position="0 1.2 0" rotation="-20 90 0">
+                    <a-entity mixin="ananya-series-note" position="0.08 0 0.7" scale="1 1 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-4 0 0">
+                <a-box src="#ananya-01" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="ananya-01-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-2 0 0">
+                <a-box src="#ananya-02" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="ananya-02-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="0 0 0">
+                <a-box src="#ananya-03" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="ananya-03-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="2 0 0">
+                <a-box src="#ananya-04" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="ananya-04-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="4 0 0">
+                <a-box src="#ananya-05" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="ananya-05-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+        </a-entity>
+
+        <!-- Subhangini -->
+        <a-entity position="7 2 6.4" rotation="0 -180 0">
+            <a-entity position="-5 -2 1" rotation="0 45 0">
+                <a-box src="#subhangini-frontpanel" position="0 1.4 0" scale="1 2.8 0.01">
+                </a-box>
+                <a-box src="#subhangini-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                </a-box>
+                <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF" emissiveintensity="1">
+                </a-box>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light>
+            </a-entity>
+            <a-entity position="0 -2 1" castShadow="true" rotation="0 -90 0">
+                <a-box position="0 0.01 0" scale="0.4 0.02 0.4"></a-box>
+                <a-box position="0 0.6 0" scale="0.05 1.2 0.05"></a-box>
+                <a-box src="#paper" scale="0.4 0.4 0.05" position="0 1.2 0" rotation="-20 90 0">
+                    <a-entity mixin="subhangini-series-note" position="0 0 1" scale="0.8 1 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-4 0 0">
+                <a-box src="#subhangini-01" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="subhangini-01-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-2 0 0">
+                <a-box src="#subhangini-02" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="subhangini-02-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="0 0 0">
+                <a-box src="#subhangini-03" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="subhangini-03-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="2 0 0">
+                <a-box src="#subhangini-04" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="subhangini-04-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="4 0 0">
+                <a-box src="#subhangini-05" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="subhangini-05-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+        </a-entity>
+
+        <!-- Aditya -->
+        <a-entity position="-13.4 2 0.1" rotation="0 90 0">
+            <a-entity position="-5 -2 1" rotation="0 45 0">
+                <a-box src="#aditya-frontpanel" position="0 1.4 0" scale="1 2.8 0.01">
+                </a-box>
+                <a-box src="#aditya-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                </a-box>
+                <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF" emissiveintensity="1">
+                </a-box>
+                <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+            </a-entity>
+            <a-entity position="0 -2 1" castShadow="true" rotation="0 -90 0">
+                <a-box position="0 0.01 0" scale="0.4 0.02 0.4"></a-box>
+                <a-box position="0 0.6 0" scale="0.05 1.2 0.05"></a-box>
+                <a-box src="#paper" scale="0.4 0.4 0.05" position="0 1.2 0" rotation="-20 90 0">
+                    <a-entity mixin="aditya-series-note" position="0.08 0 0.7" scale="1 1 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-4 0 0">
+                <a-box src="#aditya-01" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="aditya-01-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-2 0 0">
+                <a-box src="#aditya-02" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="aditya-02-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="0 0 0">
+                <a-box src="#aditya-03" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="aditya-03-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="2 0 0">
+                <a-box src="#aditya-04" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="aditya-04-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="4 0 0">
+                <a-box src="#aditya-05" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="aditya-05-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+        </a-entity>
+
+        <!-- Sahir -->
+        <a-entity position="13.4 2 0.1" rotation="0 -90 0">
+            <a-entity position="-5 -2 1" rotation="0 45 0">
+                <a-box src="#sahir-frontpanel" position="0 1.4 0" scale="1 2.8 0.01">
+                </a-box>
+                <a-box src="#sahir-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                </a-box>
+                <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                </a-box>
+                <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF" emissiveintensity="1">
+                </a-box>
+                <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+            </a-entity>
+            <a-entity position="0 -2 1" castShadow="true" rotation="0 -90 0">
+                <a-box position="0 0.01 0" scale="0.4 0.02 0.4"></a-box>
+                <a-box position="0 0.6 0" scale="0.05 1.2 0.05"></a-box>
+                <a-box src="#paper" scale="0.4 0.4 0.05" position="0 1.2 0" rotation="-20 90 0">
+                    <a-entity mixin="sahir-series-note" position="0.08 0 0.7" scale="1 1 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-4 0 0">
+                <a-box src="#sahir-01" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sahir-01-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="-2 0 0">
+                <a-box src="#sahir-02" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sahir-02-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="0 0 0">
+                <a-box src="#sahir-03" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sahir-03-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="2 0 0">
+                <a-box src="#sahir-04" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sahir-04-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+            <a-entity position="4 0 0">
+                <a-box src="#sahir-05" scale="1 1 0.01" position="0 0 -0.1">
+                </a-box>
+                <a-cylinder color="grey" height="1.1" radius="0.01" position="0 1.4 1.2">
+                    <a-cylinder color="grey" height="0.2" radius="0.05" position="0 -0.5 0" rotation="45 0 0"
+                        cast-shadow="true">
+                        <a-cylinder color="white" height="0.02" radius="0.05" position="0 -0.12 0" emissive="#FFFFFF"
+                            emissiveintensity="0.5">
+                            <a-light type="spot" color="#FFFFFF" position="0 -1.15 0" intensity="0.5" decay="0.9"
+                                distance="1.5" penumbra="1.4" angle="240" shadowCameraVisible="true">
+                            </a-light>
+                        </a-cylinder>
+                    </a-cylinder>
+                </a-cylinder>
+
+                <a-box src="#paper" scale="0.2 0.2 0.01" position="0.75 0 -0.1">
+                    <a-entity mixin="sahir-05-note" position="0.6 0 0.7" scale="2 2 1"></a-entity>
+                </a-box>
+            </a-entity>
+        </a-entity>
+
+        <!-- Center panel Left -->
+        <a-entity position="-4 0 0" rotation="0 0 0">
+            <a-entity position="0 0 0">
+                <a-entity position="-1.3 0 0" rotation="0 90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel1" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                </a-entity>
+                <a-entity position="1.3 0 0" rotation="0 -90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel2" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                </a-entity>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 45 0">
+                <a-entity position="-1.3 0 0" rotation="0 90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel3" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                </a-entity>
+                <a-entity position="1.3 0 0" rotation="0 -90 0">
+                    <a-box center-frontpanel1" position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel4" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                </a-entity>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 90 0">
+                <a-entity position="-1.3 0 0" rotation="0 90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel5" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                </a-entity>
+                <a-entity position="1.3 0 0" rotation="0 -90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel6" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                </a-entity>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 135 0">
+                <a-entity position="-1.3 0 0" rotation="0 90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#aditya-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                </a-entity>
+                <a-entity position="1.3 0 0" rotation="0 -90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#sahir-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+        <!-- Center panel Right -->
+        <a-entity position="4 0 0" rotation="0 0 0">
+            <a-entity position="0 0 0">
+                <a-entity position="-1.3 0 0" rotation="0 90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel1" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                    <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                    <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+                </a-entity>
+                <a-entity position="1.3 0 0" rotation="0 -90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel2" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                    <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                    <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+                </a-entity>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 45 0">
+                <a-entity position="-1.3 0 0" rotation="0 90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel3" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                    <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                    <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+                </a-entity>
+                <a-entity position="1.3 0 0" rotation="0 -90 0">
+                    <a-box center-frontpanel1" position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel4" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                    <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                    <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+                </a-entity>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 90 0">
+                <a-entity position="-1.3 0 0" rotation="0 90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel5" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                    <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                    <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+                </a-entity>
+                <a-entity position="1.3 0 0" rotation="0 -90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#frontpanel6" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                    <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                    <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+                </a-entity>
+            </a-entity>
+            <a-entity position="0 0 0" rotation="0 135 0">
+                <a-entity position="-1.3 0 0" rotation="0 90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#aditya-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                    <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                    <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+                </a-entity>
+                <a-entity position="1.3 0 0" rotation="0 -90 0">
+                    <a-box position="0 1.4 0" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box src="#sahir-backpanel" position="0 1.4 -0.01" scale="1 2.8 0.01">
+                    </a-box>
+                    <a-box color="white" position="0 0.025 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="white" position="0 2.8 0" scale="1 0.05 0.2">
+                    </a-box>
+                    <a-box color="yellow" position="0 2.78 0" scale="0.8 0.02 0.2" emissive="#FFFFFF"
+                        emissiveintensity="1">
+                    </a-box>
+                    <!-- <a-light type="point" color="#FFFFFF" position="0 1.35 0.2" intensity="0.1"></a-light>
+                    <a-light type="point" color="#FFFFFF" position="0 1.35 -0.2" intensity="0.1"></a-light> -->
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+        <!-- Lights -->
+        <a-light type="ambient" color="#FFFFFF" position="0 0 0" intensity="0.5"></a-light>
+
+        <!-- Walls -->
+        <a-entity>
+            <a-box src="#yellow-brick" repeat="14 5" roughness="1.0" position="0 5 -7" scale="28 10 1">
+            </a-box>
+            <a-box src="#door1" roughness="1.0" position="0 1.5 -7" scale="1.389 3 1.05"></a-box>
+            <a-box src="#white-brick" repeat="28 10" roughness="1.0" position="0 5 7" scale="28 10 1">
+            </a-box>
+            <a-box src="#door1" roughness="1.0" position="0 1.5 7" scale="1.389 3 1.05"></a-box>
+            <a-box src="#white-brick" repeat="28 10" roughness="1.0" position="14 5 0" scale="1 10 14">
+            </a-box>
+            <a-box src="#white-brick" repeat="28 10" roughness="1.0" position="-14 5 0" scale="1 10 14">
+            </a-box>
+        </a-entity>
+
+        <!-- Floor -->
+        <a-plane src="#floor" repeat="14 7" roughness="0.8" position="0 0 0" rotation="-90 0 0" width="28" height="14">
+        </a-plane>
+
+        <!-- Sky -->
+        <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+</body>
+
+</html>
